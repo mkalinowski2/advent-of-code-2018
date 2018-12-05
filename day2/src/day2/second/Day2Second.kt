@@ -6,20 +6,12 @@ fun main() {
   val ids = getIds("./day2/input/input.txt")
 
   ids.mapNotNull { id ->
-    id.toList().let { _ ->
-      ids.filter { it != id }
-        .map { Pair(it, id) }
-        .groupBy {
-          it.first.toList()
-            .asSequence()
-            .filterIndexed { index, value -> value != it.second[index] }
-            .toList()
-            .size
-        }
-        .filter { it.key == 1 }
-        .map { it.value.first() }
-        .firstOrNull()
-    }
+    ids.filter { it != id }
+      .map { Pair(it, id) }
+      .groupBy { it.first.filterIndexed { index, value -> value != it.second[index] }.count() }
+      .filter { it.key == 1 }
+      .map { it.value.first() }
+      .firstOrNull()
   }
     .map { it.first.filterIndexed { index, value -> value == it.second[index] } }
     .distinct()
