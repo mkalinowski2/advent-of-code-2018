@@ -1,7 +1,7 @@
 package day2.first
 
 import java.io.File
-import kotlin.streams.asSequence
+import kotlin.streams.toList
 
 fun main() {
   val ids = getIds("./day2/input/input.txt")
@@ -10,7 +10,7 @@ fun main() {
   var thirdOccurrencesNumber = 0
 
   ids.forEach { id ->
-    id.chars().asSequence().groupBy { it }
+    id.chars().toList().groupBy { it }
       .map { it.value.size }
       .distinct()
       .let { distinctCharsOccurrences ->
