@@ -14,7 +14,6 @@ fun main() {
       .firstOrNull()
   }
     .map { it.first.filterIndexed { index, value -> value == it.second[index] } }
-    .distinct()
     .onEach { println(it) }
 }
 
