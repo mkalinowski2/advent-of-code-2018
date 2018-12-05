@@ -1,4 +1,4 @@
-package first
+package day1.first
 
 import java.io.File
 

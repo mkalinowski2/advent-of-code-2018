@@ -1,4 +1,4 @@
-package second
+package day1.second
 
 import java.io.File
 import java.util.stream.IntStream
