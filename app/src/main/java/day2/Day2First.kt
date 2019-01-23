@@ -1,9 +1,9 @@
-package day2.first
+package day2
 
 import java.io.File
 
 fun main() {
-  val ids = getIds("./day2/input/input.txt")
+  val ids = Input().getIds()
 
   var twiceOccurrencesNumber = 0
   var thirdOccurrencesNumber = 0

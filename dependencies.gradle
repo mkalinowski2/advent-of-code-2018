@@ -1,0 +1,25 @@
+//============= ALL VERSIONS =================
+def versions = [:]
+
+versions.kotlin = "1.3.11"                     //https://kotlinlang.org/
+
+//Testing libs
+versions.junit = '4.12'                        //https://github.com/junit-team/junit5
+versions.kluent = "1.45"                       //https://github.com/MarkusAmshove/Kluent
+versions.mockk = "1.7.7"                       //https://github.com/oleksiyp/mockk
+
+//============= PLUGINS ======================
+ext.plgns = [:]
+plgns.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+
+//============= COMPILE AND RUNTIME DEPENDENCIES =================
+ext.deps = [:]
+
+deps.kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin"
+
+//============= TEST DEPENDENCIES =================
+ext.tests = [:]
+tests.junit = "junit:junit:$versions.junit"
+tests.kotlin_reflect = "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin"
+tests.kluent = "org.amshove.kluent:kluent:$versions.kluent"
+tests.mockk = "io.mockk:mockk:$versions.mockk"

@@ -1,6 +1,3 @@
-#built application files
-*.jar
-
 # Java class files
 *.class
 
@@ -19,7 +16,10 @@ local.properties
 # Log Files
 *.log
 
+
 # Intellij
 *.iml
 **/*.tml
 .idea/
+
+*.attach_*

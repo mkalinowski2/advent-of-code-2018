@@ -1,0 +1,5 @@
+apply from: "$rootDir/kotlin_shared.gradle"
+
+dependencies {
+    implementation deps.kotlin_stdlib
+}

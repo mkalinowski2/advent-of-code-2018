@@ -1,9 +1,7 @@
-package day2.second
-
-import java.io.File
+package day2
 
 fun main() {
-  val ids = getIds("./day2/input/input.txt")
+  val ids = Input().getIds()
 
   ids.mapIndexedNotNull { index, id ->
     ids.subList(index + 1, ids.size)
@@ -16,5 +14,3 @@ fun main() {
     .map { it.first.filterIndexed { index, value -> value == it.second[index] } }
     .onEach { println(it) }
 }
-
-fun getIds(fileName: String) = File(fileName).readLines()

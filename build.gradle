@@ -1,0 +1,19 @@
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath plgns.kotlin_gradle_plugin
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "http://central.maven.org/maven2/" }
+        jcenter()
+    }
+}
