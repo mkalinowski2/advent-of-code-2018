@@ -1,6 +1,19 @@
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+test {
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+}
+
 dependencies {
     implementation deps.kotlin_stdlib
 
@@ -8,10 +21,4 @@ dependencies {
     testImplementation tests.kotlin_reflect
     testImplementation tests.kluent
     testImplementation tests.mockk
-}
-
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
